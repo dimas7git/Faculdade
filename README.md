@@ -1,2 +1,2 @@
 # Faculdade
-Atividades e Projetos feito na Faculdade
+Atividades e Projetos feitos na Faculdade
