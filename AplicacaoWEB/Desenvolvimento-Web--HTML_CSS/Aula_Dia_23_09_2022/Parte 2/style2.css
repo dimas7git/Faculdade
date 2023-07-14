@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+
+body {
+    background-image: url(paisagem.jpg)
+}
+
+.bold {
+    font-weight: 600;
+    font-size: 25px;
+    font-family: 'Rubik Dirt', cursive;
+}
+
+.d1 {
+    border-top: 10px solid white;
+    border-bottom: 10px solid white;
+    background-color: lightgreen;
+}
+
+.d2 {
+    border-top: 10px solid white;
+    border-bottom: 10px solid white;
+    background-color: lightcoral;
+}
+
+.img {
+    padding: 10px 10px 10px 10px;
+}
+
+.d1img1 {
+    width: 150px;
+}
+
+.d1img2 {
+    width: 250px;
+}
+
+.d1img3 {
+    width: 350px;
+}
+
+.d1img4 {
+    width: 450px;
+}

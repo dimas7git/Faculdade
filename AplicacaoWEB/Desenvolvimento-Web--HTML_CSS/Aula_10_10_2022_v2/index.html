@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 1</title>
+</head>
+
+<body>
+    <h1>Praticando 1 - Formulários HTML</h1>
+    <br>
+    <label for="nome" class="form-label">Nome</label>
+    <input type="text" class="form-control" id="nome" value="Dimas">
+    <br><br>
+    <label for="email" class="form-label">E-mail</label>
+    <input type="email" class="form-control" id="email" placeholder="seu@email.aqui">
+    <br><br>
+    <label for="marca" class="form-label">Marca de carro</label>
+    <select>
+        <option>Fiat</option>
+        <option>Audi</option>
+        <option>Honda</option>
+    </select>
+    <br><br>
+    <label for="obs" class="form-label">Observação</label>
+    <textarea type="text"  id="form-control"></textarea>
+    <br><br>
+    <form action="">
+        Linguagem Web Favorita:
+        <input type="radio" id="ht" name="ht">
+        <label for="ht"> HTML</label>
+        <input type="radio" id="cs" name="cs">
+        <label for="cs"> CSS</label>
+        <input type="radio" id="js" name="js">
+        <label for="js"> JavaScript</label>
+      </form>
+<br><br><br>
+      <form action="">
+        Filmes que eu quero ver quando lançar: <br>
+        <input type="checkbox" id="pt" name="pt">
+        <label for="pt">  Pantera Negra: Wakanda Para Sempre</label><br>
+        <input type="checkbox" id="ava" name="ava">
+        <label for="ava"> Avatar 2</label><br>
+        <input type="checkbox" id="ve" name="ve">
+        <label for="ve"> Velozes e Furiosos 10</label><br>
+        <input type="checkbox" id="aq" name="aq">
+        <label for="aq"> Aquamem e o Reino Perdido</label><br><br>
+        <button type="submit" value="Submit">Enviar</button>
+        <button type="reset" value="Reset">Reset</button>
+          </form>
+</body>
+
+</html>

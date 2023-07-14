@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 3</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      body{
+        width: 100%;
+      }
+        .form {
+            width: 400px;
+            background-color: lightgrey;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            padding-right: 25px;
+            margin-right: 50px;
+            padding-left: 25px;
+        }
+
+        .formu {
+            width: 400px;
+        }
+
+        #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            text-align: center;
+
+        }
+
+        #customers td,
+        #customers th {
+            border: 1px solid #ddd;
+            padding-right: 50px;
+            text-align: center;
+
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+
+        #customers th {
+        
+            text-align: center;
+            background-color: #04AA6D;
+            color: white;
+        }
+
+h1{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+}
+
+
+
+input, select, button{
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    height: 40px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 3px;
+    border: 0;
+}
+
+input, select{
+    padding-left: 15px;
+}
+.enviar{
+    margin: 15px 0 15px 0;
+    background-color: rgb(76, 175, 80);
+    color: white;
+}
+.limpar{
+    background-color: rgb(255, 193, 7);
+    color: white;
+}
+.enviar:hover,#limpar:hover{
+    border: 1px solid darkslategrey;
+    cursor: pointer;
+}
+
+.div1{
+    display: flex;
+    justify-content: center;
+}
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li class="lis"><a href="index.html">Inicio</a></li>
+            <li class="lis"><a href="pg2.html">Busca</a></li>
+            <li class="lis"><a href="pg3.html">Formulario/Tabela</a>
+            <li class="espaco"><a href="pg4.html">Postagem c/imagem</a></li>
+        </ul>
+    </nav>
+    <div>
+        <h1>Formulário de cadastro e Tabela com dados</h1>
+        <br>
+       <div class="div1">
+        <div class="form">
+            Nome Completo <br><input type="text" class="formu" placeholder="Nome">
+            <br>
+            Telefone <br><input type="text" class="formu" placeholder="(19)0000-0000">
+            <br>
+            Email <br><input type="email" class="formu" placeholder="teste@gmail">
+            <br>
+            Estado de residencia <br> <select id="UF" name="UF">
+                <option value="">Selecione</option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MS">MS</option>
+                <option value="MT">MT</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+             </select>
+            <input type="button" value="Enviar" class="enviar">
+            <input type="button" value="Limpar" class="limpar">
+        </div>
+        <table id="customers">
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Contato</th>
+                <th>Estado</th>
+            </tr>
+            <tr>
+                <td>José da Silva</td>
+                <td>32432423</td>
+                <td>jose@gmail.com</td>
+                <td>São paulo</td>
+            </tr>
+            <tr>
+                <td>Marcos</td>
+                <td>13213131</td>
+                <td>marcos@gmail.com</td>
+                <td>São paulo</td>
+            </tr>
+            <tr>
+                <td>Carlos</td>
+                <td>12321321</td>
+                <td>carlos@gmail.com</td>
+                <td>São paulo</td>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>12313212</td>
+                <td>ana@gmail.com</td>
+                <td>São paulo</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

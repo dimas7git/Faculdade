@@ -1,0 +1,44 @@
+table,td{
+    border: 1px solid black;
+    width: 300px;
+}
+body{
+    background-repeat: repeat-x;
+    background-size: 150px;
+    background-position: 10% 150%;   
+    background-image: url(../imagem/pngwing.com.png);
+}
+.ifsp{
+    background-image: url(../imagem/ifsp.png);
+    background-repeat: no-repeat;
+    background-size: 250px;
+    background-position: right center;   
+}
+.a2{
+    background-color: red;
+}
+
+.a3{
+    background-color:#b30000;
+}
+.a4{
+    background-color: #660000;
+}
+.a5{
+    background-color: green;
+}
+.a6{
+    background-color: #99ff99;
+}
+.a7{
+    background-color: #004d00;
+}
+.a8{
+    background-color: blue;
+}
+.a9{
+    background-color: #ccccff;
+}
+.a10{
+    background-color: #000066;
+}

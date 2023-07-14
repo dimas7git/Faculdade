@@ -1,0 +1,13 @@
+package genericExemplo;
+
+public class imprimirString {
+	String algoParaImprimir;
+
+	public imprimirString(String algoParaImprimir) {
+		this.algoParaImprimir = algoParaImprimir;
+	}
+	
+	public void imprimir() {
+		System.out.println(algoParaImprimir);
+	}
+}

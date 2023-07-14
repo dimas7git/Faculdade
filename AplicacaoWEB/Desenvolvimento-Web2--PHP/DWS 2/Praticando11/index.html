@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body class="p-4">
+    <header class="border-bottom border-dark mb-2">
+        <h1>Formulário</h1>
+    </header>
+    <main>
+        <p>Escolha alguns interesses:</p>
+        <form method="post" action="destino.php">
+            <div class="container m-0 p-0 mb-2">
+                <div class="row">
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="esportes" class="form-check-input" />
+                        <label class="form-check-label">Esportes</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="smartphone" class="form-check-input" />
+                        <label class="form-check-label">Smartphones</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="vestuario" class="form-check-input" />
+                        <label class="form-check-label">Vestuário</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="calcados" class="form-check-input" />
+                        <label class="form-check-label">Calçados</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="futebol" class="form-check-input" />
+                        <label class="form-check-label">Futebol</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="computadores" class="form-check-input" />
+                        <label class="form-check-label">Computadores e hardware</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="perfumes" class="form-check-input" />
+                        <label class="form-check-label">Perfumes</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="hoteis" class="form-check-input" />
+                        <label class="form-check-label">Hotéis</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="basquete" class="form-check-input" />
+                        <label class="form-check-label">Basquete</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="desktop" class="form-check-input" />
+                        <label class="form-check-label">Desktop gamers</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="economia" class="form-check-input" />
+                        <label class="form-check-label">Economia</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="pousadas" class="form-check-input" />
+                        <label class="form-check-label">Pousadas</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="tenis" class="form-check-input" />
+                        <label class="form-check-label">Tênis</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="notebooks" class="form-check-input" />
+                        <label class="form-check-label">Notebooks</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="comidas" class="form-check-input" />
+                        <label class="form-check-label">Comidas</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="cinema" class="form-check-input" />
+                        <label class="form-check-label">Cinema</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="taekowndo" class="form-check-input" />
+                        <label class="form-check-label">Taekdowndo</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="veiculos" class="form-check-input" />
+                        <label class="form-check-label">Veículos</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="bebidas" class="form-check-input" />
+                        <label class="form-check-label">Bebidas</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="filmes" class="form-check-input" />
+                        <label class="form-check-label">Filmes</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="tecnologia" class="form-check-input" />
+                        <label class="form-check-label">Tecnologia</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="escritorio" class="form-check-input" />
+                        <label class="form-check-label">Escritório</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="imoveis" class="form-check-input" />
+                        <label class="form-check-label">Imóvies</label>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" name="dados[]" value="series" class="form-check-input" />
+                        <label class="form-check-label">Séries</label>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <button type="submit" class="btn btn-success" style="margin-right: 1rem;">Enviar</button>
+                <button type="reset" class="btn btn-warning">Limpar</button>
+            </div>
+        </form>
+    </main>
+
+</body>
+</html>
+    

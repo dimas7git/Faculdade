@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>s</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <div class="container">
+        
+        <h1>Formulário</h1>
+        <form class="row g-3">
+            <div class="col-md-12">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Nome" required>
+            </div>
+            <div class="col-md-5">
+                <label for="telefone" class="form-label">Telefone</label>
+                <div class="input-group">
+                    <input type="tel" class="form-control" id="telefone" required placeholder="Telefone" pattern="^\d{2}-\d{4}-\d{4}$" required >
+                </div>
+            </div>
+            <div class="col-md-7">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required placeholder="nome@exemplo.com">
+            </div>
+            <div class="col-md-4">
+                <label for="cpf" class="form-label">CPF</label>
+                <input type="text" class="form-control" id="cpf" placeholder="XXX.XXX.XXX-XX" pattern="^\d{3}-\d{3}-\d{3}-\d{2}$" required > 
+            </div>
+            <div class="col-md-4">
+                <label for="data" class="form-label">Data Nascimento</label>
+                <div class="input-group">
+                    <input type="date" class="form-control" required id="data"  >
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="cep" class="form-label">CEP</label>
+                <input type="text" class="form-control" id="cep" required placeholder="XX.XXX-XX" pattern="^\d{5}-\d{3}$" required >
+            </div>
+            <div class="col-md-8">
+                <label for="end" class="form-label">Endereço</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="end" required placeholder="Rua, nº e bairro" >
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="cidade" class="form-label">Cidade</label>
+                <select class="form-select" id="cidade" required>
+                    <option selected disabled value="">Escolha...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div>
+           
+            <div class="col-6">
+                <label for="perfil" class="form-label">Foto de Perfil</label>
+                <input type="file" name="arquivos" accept="image/*"  multiple /> 
+
+            </div>
+            <div class="col-6">
+                <label for="arq" class="form-label">Contrato assinado(em PDF)</label>
+                <input type='file' required accept="application/pdf">
+            </div>
+
+            <div class="col-6">
+                <button class="btn btn-primary" type="submit">Cadastrar</button>
+                <button class="btn btn-primary" type="reset">Limpar</button>
+
+            </div>
+        </form>     
+    
+    </div>
+</body>
+
+</html>

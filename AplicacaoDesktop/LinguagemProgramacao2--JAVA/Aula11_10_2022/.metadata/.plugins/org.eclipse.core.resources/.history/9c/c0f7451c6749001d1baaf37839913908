@@ -1,0 +1,16 @@
+package exPilha;
+
+public class Pilha<T> {
+	public void empilhar(T t) {
+		
+	}
+	
+	public T desimpilhar() 
+		throws RuntimeException{
+			return null;
+		}
+	
+	public boolean vazio() {
+		return false;
+	}
+}

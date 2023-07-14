@@ -1,0 +1,11 @@
+CREATE TABLE profissionais (
+	id_profissional serial,
+	nome varchar(30),
+	descricao TEXT,
+	habilidades TEXT,
+	experiencias TEXT,
+	contato TEXT,
+	cursos TEXT,
+	preco decimal,
+	CONSTRAINT profissional_pkey PRIMARY KEY (id_profissional)
+);

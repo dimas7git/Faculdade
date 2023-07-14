@@ -1,0 +1,29 @@
+table,td{
+    border: 1px solid black;
+}
+
+body{
+    background-color: aquamarine;
+}
+
+.td{
+    padding: 30px 50px;
+    text-align: center;
+}
+
+
+.verde{
+    background-color: green;
+}
+
+.vermelho{
+    background-color: red;
+}
+
+.azul{
+    background-color: blue;
+}
+
+.amarelo{
+    background-color: yellow;
+}

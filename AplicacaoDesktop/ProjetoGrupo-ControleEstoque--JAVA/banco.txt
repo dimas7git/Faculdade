@@ -1,0 +1,39 @@
+CREATE TABLE produto (
+	id_produto serial,
+	produto varchar(75),
+	data varchar(10),
+	tipo varchar(75),
+	valor integer,
+	responsavel varchar(75),
+	descricao varchar(1000),
+	imagem bytea
+);
+
+CREATE TABLE funcionario(
+	id_funcionario serial,
+	nome varchar(100),
+	idade integer, /*ou varchar(3)*/
+	dataNascimento varchar(10),
+	imagem bytea
+);
+
+CREATE TABLE comprou(
+   id_vend serial,
+    dat_vend date,
+    id_cliente integer
+)
+
+CREATE TABLE Venda( 
+ id_venda integer,
+ id_produto integer
+ )
+CREATE TABLE cliente(
+      nome varchar(50),
+     telefone integer,
+    cpf varchar(50), 
+    id_cliente serial
+)
+
+
+drop table cliente;
+select * from cliente;

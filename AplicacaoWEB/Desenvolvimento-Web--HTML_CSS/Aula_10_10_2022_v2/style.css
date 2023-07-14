@@ -1,0 +1,32 @@
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(0,212,255,1), 0%, rgba(9,121,36,1) 35%, rgba(2,0,36,1) 100%);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+img{
+    width: 150px;
+}
+
+.div11{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.div1{
+    align-items: center;
+    flex-direction: row;    
+}
+
+button{
+    background: white;
+    color: black;
+    border-style: outset;
+    border-color: black;
+    height: 50px;
+    width: 100px;
+    font: bold15px arial,sans-serif;
+    text-shadow: none;
+    margin: 1vh;
+    }
+    

@@ -1,0 +1,14 @@
+package genericExemplo;
+
+public class imprimirGenerico<T>{
+	T algoParaImprimir;
+
+	public imprimirGenerico(T algoParaImprimir) {
+		super();
+		this.algoParaImprimir = algoParaImprimir;
+	}
+	
+	public void imprimir() {
+		System.out.println(algoParaImprimir);
+	}
+}

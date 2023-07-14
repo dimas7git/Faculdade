@@ -1,0 +1,38 @@
+create table Administrador(
+id_adm serial,
+preco float,
+qtdAssado float,
+nomeAssados varchar(30),
+constraint pk_adm primary key (id_adm)
+)
+drop table Administrador
+create table Pedidos(
+id_ped serial,
+nomeCli varchar(30),
+assadosComprados varchar (50),
+precoTotal float,
+endereco varchar(40),
+constraint pk_ped primary key(id_ped)
+)
+
+create table Fornecedor(
+id_fornec serial,
+nomeForne varchar(40),
+produtoForne varchar (30),
+qtdProd float,
+precoTotal float,
+constraint pk_fornec primary key (id_fornec)
+)
+
+CREATE TABLE ADM(
+idAdmin SERIAL,
+login VARCHAR(64),
+senha VARCHAR(64),
+CONSTRAINT PK_ADMm PRIMARY KEY (idAdmin)
+)
+INSERT INTO ADM VALUES (12, 'admin', '8C6976E5B5410415BDE908BD4DEE15DFB167A9C873FC4BB8A81F6F2AB448A918');
+INSERT INTO ADM VALUES (11, 'admin', 'admin');
+
+insert into adm (login,senha) values ('admin','admin');
+select * from Administrador
+

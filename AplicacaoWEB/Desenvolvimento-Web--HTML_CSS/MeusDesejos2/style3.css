@@ -1,0 +1,71 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+body{
+    margin-left: 5px;
+    background-color: rgb(180, 153, 143);
+}
+p{
+    text-indent: 10px;
+}
+.im1{
+    float: right;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+iframe{
+    padding-left: 20%;
+}
+.demotext {
+    color: #FFFFFF;
+    background: #FFFFFF;
+    text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+    color: #FFFFFF;
+    background-color: rgb(180, 153, 143);
+    text-align: center;
+}
+.item1{
+    font-family: 'Oswald', sans-serif;
+    border: 3px groove #666666;
+    box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.item2{
+    font-family: 'Nanum Myeongjo', serif;
+    border: 3px groove #666666;
+    box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.item3{
+    font-family: 'Dosis', sans-serif;
+    border: 3px groove #666666;
+    box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.myButton {
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:linear-gradient(to bottom, #642929 5%, #d87777 100%);
+	background-color:#682f2f;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	padding:12px 30px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #9e4747 5%, #7892c2 100%);
+	background-color:#704e4e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}

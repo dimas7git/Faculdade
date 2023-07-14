@@ -1,0 +1,52 @@
+package Ex02;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static String nome;
+	public static Double n1,n2, qtd;
+	public static void main(String[] args) {
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.print("Quantos alunos voce deseja cadastrar? ");
+		qtd = Double.parseDouble(entrada.nextLine());
+		LerNotas(entrada, qtd);
+		Double nf = (n1 + n2) / 2;
+		System.out.println(nome);
+		System.out.println("Sua notafinal é: " + nf);
+		
+		Imprimir(nf);
+
+		entrada.close();
+	}
+
+	private static void LerNotas(Scanner entrada, Double qtd) {
+	for(int i=0; i<qtd; i++) {
+		System.out.print("Digite seu nome: ");
+		nome = entrada.nextLine();
+		System.out.print("Digite sua primeira nota: ");
+		n1 = Double.parseDouble(entrada.nextLine());
+		System.out.print("Digite sua segunda nota: ");
+	    n2 = Double.parseDouble(entrada.nextLine());
+	}	
+	}
+	
+	private static void Imprimir(Double nf) {
+		if (nf > 8) {
+			System.out.print("Seu conceito é A");
+		} else if ((nf <= 8) && (nf >= 7)) {
+			System.out.print("Seu conceito é B");
+		} else if ((nf < 7) && (nf >= 6)) {
+			System.out.print("Seu conceito é C");
+		} else if ((nf < 6) && (nf >= 5)) {
+			System.out.print("Seu conceito é D");
+		} else {
+			System.out.print("Seu conceito é E");
+		}
+	}
+	
+	
+}
+

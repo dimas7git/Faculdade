@@ -1,0 +1,22 @@
+
+.verdefraco{
+    background-color: lightgreen;
+}
+.verdeforte{
+    background-color: green;
+}
+.verdemaisforte{
+    background-color: rgb(0, 93, 0);
+}
+div{
+    padding-bottom: 19px;
+}
+.vermelhofraco{
+    background-color: rgb(151, 0, 0);
+}
+.vermelhoforte{
+    background-color: rgb(255, 0, 0);
+}
+.vermelhomaisforte{
+    background-color: rgb(93, 0, 0);
+}

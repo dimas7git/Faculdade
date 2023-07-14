@@ -1,0 +1,25 @@
+.div1{
+    border: 7px solid red;
+    background-color: lightblue;
+    padding: 6px 6px;
+}
+
+.vermelho{
+    color: red;
+    font-weight: bold;
+}
+
+body{
+    background-color: rgb(182, 182, 182);
+}
+
+.div2{
+    border: 7px solid blue;
+    background-color: lightcoral;
+    padding: 6px 6px;
+}
+
+.azul{
+    color: blue;
+    font-weight: bold;
+}

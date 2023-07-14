@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+
+body {
+    margin: 0;
+    width: 100%;
+    background: linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%);
+    font-family: 'Kanit', sans-serif;
+}
+
+.container {
+    width: 100%;
+}
+
+img {
+    width: 350px;
+    height: 250px;
+    padding: 10px 10px 10px 10px;
+}
+
+.grid {
+    display: flex;
+}
+
+h1 {
+    font-style: italic;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(83, 0, 0);
+}
+
+.bt {
+    float: right;
+    margin-top: 35px;
+  
+}
+.bt1 {
+    margin-top: 35px;
+  
+}
+
+p {
+    padding-left: 20px;
+}
+
+.item1 {
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(255, 166, 0, 0.315);
+    text-indent: 1em;
+    padding-bottom: 23px;
+}
+
+.item2 {
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(255, 255, 0, 0.438);
+    padding-bottom: 72px;
+    text-indent: 1em;
+}
+
+.item3 {
+    display: inline-block;
+    background-color: rgba(0, 174, 255, 0.521);
+    text-indent: 1em;
+}
+
+.item4 {
+
+    display: inline-block;
+    background-color: rgba(255, 0, 0, 0.493);
+    text-indent: 1em;
+}
+
+.table {
+    padding-top: 2%;
+    padding-left: 40%;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-color: #93a1a1;
+    border-spacing: 0;
+}
+
+.tg td {
+    background-color: #fdf6e3;
+    border-color: #93a1a1;
+    border-style: solid;
+    border-width: 1px;
+    color: #002b36;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg th {
+    background-color: #657b83;
+    border-color: #93a1a1;
+    border-style: solid;
+    border-width: 1px;
+    color: #fdf6e3;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg .tg-amwm {
+    font-weight: bold;
+    text-align: center;
+    vertical-align: top
+}
+
+.tg .tg-7btt {
+    border-color: inherit;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: top
+}
+.myButton {
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:linear-gradient(to bottom, #642929 5%, #d87777 100%);
+	background-color:#682f2f;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	padding:12px 30px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #9e4747 5%, #7892c2 100%);
+	background-color:#704e4e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}

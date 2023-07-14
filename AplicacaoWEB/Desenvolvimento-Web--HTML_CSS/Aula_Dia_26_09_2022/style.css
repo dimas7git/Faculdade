@@ -1,0 +1,27 @@
+body{
+    padding: 0%;
+}
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.f1 {
+    float: right;
+}
+
+.f2 {
+    float: left;
+}
+
+.f3 {
+    float: right;
+}
+
+.d1 {
+    border-bottom: 10px dashed rgb(77, 209, 253);
+}
+
+.d2 {
+    border-bottom: 10px dashed rgb(77, 209, 253);
+}

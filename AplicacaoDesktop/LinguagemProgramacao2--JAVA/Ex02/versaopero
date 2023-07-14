@@ -1,0 +1,71 @@
+package Exercicio2;
+
+import Exercicio1.Aluno;
+import java.util.*;
+
+public class Main {
+	private static Scanner entrada = new Scanner(System.in);
+	private static ArrayList<Aluno> alunos = new ArrayList<Aluno>();
+
+	public static void main(String[] args) {
+		setAlunos();
+		printResultados();
+	}
+	
+	private static void setAlunos() {
+		System.out.print("Digite o numero de alunos para cadastro: ");
+		int numeroAlunos = entrada.nextInt();
+		for (int i = 0; numeroAlunos > i; i++) {
+			setDados();
+		}
+	}
+
+	private static void setDados() {
+		Aluno aluno = new Aluno();
+		setNomeWithUserInput(aluno);
+		setNotasWithUserInput(aluno);
+		alunos.add(aluno);
+	}
+
+	private static void setNomeWithUserInput(Aluno aluno) {
+		System.out.print("Digite seu nome: ");
+		aluno.setNome(entrada.nextLine());
+	}
+
+	private static void setNotasWithUserInput(Aluno aluno) {
+		System.out.print("Digite sua primeira nota: ");
+		Double n1 = Double.parseDouble(entrada.nextLine());
+		aluno.setN1(n1);
+		System.out.print("Digite sua segunda nota: ");
+		Double n2 = Double.parseDouble(entrada.nextLine());
+		aluno.setN2(n2);
+		aluno.setN3((n1 + n2) / 2);
+	}
+	
+	private static void printResultados() {
+		for (int i = 0; alunos.size() > i;i ++) {
+			printResultado(alunos.get(i));
+		}
+	}
+
+	private static void printResultado(Aluno aluno) {
+		System.out.println(aluno.getNome());
+		System.out.println("Sua nota final é: " + aluno.getN3());
+		printConceito(aluno.getN3());
+	}
+
+	private static void printConceito(double nf) {
+		if (nf > 8) {
+			System.out.println("Seu conceito é A");
+		} else if ((nf <= 8) && (nf >= 7)) {
+			System.out.println("Seu conceito é B");
+		} else if (nf < 7 && nf >= 6) {
+			System.out.println("Seu conceito é C");
+		} else if (nf < 6 && nf >= 5) {
+			System.out.println("Seu conceito é D");
+		} else {
+			System.out.println("Seu conceito é E");
+		}
+	}
+}
+

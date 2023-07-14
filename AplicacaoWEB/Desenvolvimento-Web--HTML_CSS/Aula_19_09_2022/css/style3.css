@@ -1,0 +1,94 @@
+.p1div:hover{
+    display: block;
+    background-color: brown;
+}
+.p1div{
+    border: 2px solid black;
+}
+.divblue{
+    background-color: lightblue;
+}
+.green1{
+   background-color: lightgreen;
+}
+.blue{
+    color: blue;
+}
+.red{
+    color: red;
+}
+.orange{
+    color: orange;
+}
+.divbranco{
+    background-color: white;
+}
+.divcenter{
+    text-align: center;
+}
+.divdire{
+    text-align: right;
+}
+.divjust{
+    text-align: justify;
+}
+.divesq{
+    text-align: left;
+}
+.divdecoration{
+    text-decoration: line-through;
+}
+.divdecoration2{
+    text-decoration: underline;
+}
+.p1maiscu{
+    text-transform: capitalize;
+}
+.p1maiscuall{
+    text-transform: uppercase;
+}
+.ident1{
+    text-indent: 100px ;
+}
+.ident2{
+    text-indent: 200px ;
+}
+.pheig{
+    line-height: 30px;
+}
+.fam1{
+    font-family: 'Pacifico', cursive;
+}
+.fam2{
+    font-family: 'Shadows Into Light', cursive;
+}
+.fam3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.fam4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.fam5{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.pital{
+    font-style: italic;
+}
+.pheih{
+    font-weight: 700;
+}
+.psize1{
+    font-size: smaller;
+}   
+.psize2{
+    font-size: small;
+}
+.psize3{
+    font-size: medium;
+}
+.psize4{
+    font-size: large;
+}
+.psize5{
+    font-size:x-large;
+}

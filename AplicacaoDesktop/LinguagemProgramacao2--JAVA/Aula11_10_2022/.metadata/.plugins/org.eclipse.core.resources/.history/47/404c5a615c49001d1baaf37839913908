@@ -1,0 +1,23 @@
+package genericExemplo;
+
+public class main {
+	public static void main(String[] args) {
+		ImprimirDouble impressaoD1 = new ImprimirDouble(777.77);
+		impressaoD1.imprimir();
+		
+		ImprimirInteir impressaoI1 = new ImprimirInteir(777);
+		impressaoI1.imprimir();
+		
+		ImprimirString impressaoS1 = new ImprimirString("IFSP");
+		impressaoS1.imprimir();
+		
+		ImprimirGenerico<Integer> impressaoTG1 = new ImprimirGenerico<>(777);
+		impressaoTG1.imprimir();
+		
+		ImprimirGenerico<Double> impressaoDG1 = new ImprimirGenerico<>(777.77);
+		impressaoTG1.imprimir();
+		
+		ImprimirGenerico<String> impressaoSG1 = new ImprimirGenerico<>("IFSP");
+		impressaoTG1.imprimir();
+	}
+}

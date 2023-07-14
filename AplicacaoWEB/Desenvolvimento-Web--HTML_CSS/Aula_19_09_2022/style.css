@@ -1,0 +1,23 @@
+body{ 
+    
+    background-color: lightblue;
+    background-repeat: no-repeat;
+    background-position: 1600px 650px ;
+    background-size: 300px;   
+    background-image: url(cute-standing-ferret-illustration-by-Vexels.png);
+}
+
+.red{
+    background-color: lightcoral    ;
+}
+
+.green{
+    background-color: lightgreen;
+}
+
+.animal{
+    background-color: rgb(122, 116, 116);
+    color: white;
+    background-size: 39px;
+    background-image: url(cute-standing-ferret-illustration-by-Vexels.png);
+}

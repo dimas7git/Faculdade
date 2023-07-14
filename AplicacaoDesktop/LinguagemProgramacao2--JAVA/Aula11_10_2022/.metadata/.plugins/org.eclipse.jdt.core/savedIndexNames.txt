@@ -1,0 +1,19 @@
+INDEX VERSION 1.131+/home/aluno/Documentos/Aula11_10_2022/.metadata/.plugins/org.eclipse.jdt.core
+712888757.index
+3908489829.index
+4069989777.index
+1423472120.index
+2134351851.index
+13111594.index
+134712519.index
+3997454759.index
+2846275669.index
+3025689530.index
+2610721110.index
+1332178976.index
+2513384404.index
+4063246703.index
+3786421719.index
+1865797976.index
+2103494820.index
+2810682177.index
