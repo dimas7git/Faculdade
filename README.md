@@ -1,4 +1,4 @@
-# Projetos e Atividades da Faculdade
+# Projetos e Atividades da Faculdade 
 
 Neste repositório, você encontrará uma coleção de projetos e atividades que realizei até agora durante a minha trajetória acadêmica na faculdade. Confira abaixo a lista de projetos disponíveis:
 
