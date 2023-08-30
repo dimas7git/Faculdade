@@ -18,7 +18,11 @@ routerApp.get("/", (req, res) => {
 });
 
 routerApp.get("/getAllClientes", appClientes.getAllClientes);
-routerApp.get("/postInsertClientes", appClientes.insertClientes);
+routerApp.post("/getClienteByID", appClientes.getClienteByID);
+routerApp.post("/insertClientes", appClientes.insertClientes);
+routerApp.post("/updateClientes", appClientes.updateClientes);
+routerApp.post("/DeleteClientes", appClientes.DeleteClientes);
+
 
 
 module.exports = routerApp;

@@ -1,44 +1,109 @@
 const db = require("../../../database/databaseconfig");
 
-const getAllClientes = async() =>{
-    return (
-        await db.query(
-          "SELECT * from clientes"
-        )   
-      ).rows;
+const getAllClientes = async () => {
+  return (
+    await db.query(
+      "SELECT *" +
+      "FROM clientes where deleted = false ORDER BY nome ASC"
+    )
+  ).rows;
 }
 
 
 // Função que insere um novo aluno
 const insertClientes = async (clientesREGPar) => {
-    //@ Atenção: aqui já começamos a utilizar a variável msg para retornar erros de banco de dados.
-    let linhasAfetadas;
-    let msg = "ok";
-    try {
-      // Executa a inserção do novo aluno no banco de dados
-      linhasAfetadas = (
-        await db.query(
-          "INSERT INTO clientes " +
-          "values(default, $1, $2, $3, $4, $5, $6)",
-          [
-            clientesREGPar.clienteid,
-            clientesREGPar.codigo,
-            clientesREGPar.nome,
-            clientesREGPar.endereco,
-            clientesREGPar.ativo,
-            clientesREGPar.deleted,
-          ]
-        )
-      ).rowCount;
-    } catch (error) {
-      // Em caso de erro, define a mensagem de erro e o número de linhas afetadas como -1
-      msg = "[mdlClientes|insertClientes] " + error.detail;
-      linhasAfetadas = -1;
-    }
-  
-    return { msg, linhasAfetadas };
-  };
+  //@ Atenção: aqui já começamos a utilizar a variável msg para retornar erros de banco de dados.
+  let linhasAfetadas;
+  let msg = "ok";
+  try {
+    // Executa a inserção do novo aluno no banco de dados
+    linhasAfetadas = (
+      await db.query(
+        "INSERT INTO clientes " +
+        "values(default, $1, $2, $3, $4, $5)",
+        [
+          clientesREGPar.codigo,
+          clientesREGPar.nome,
+          clientesREGPar.endereco,
+          clientesREGPar.ativo,
+          clientesREGPar.deleted,
+        ]
+      )
+    ).rowCount;
+  } catch (error) {
+    // Em caso de erro, define a mensagem de erro e o número de linhas afetadas como -1
+    msg = "[mdlClientes|insertClientes] " + error.detail;
+    linhasAfetadas = -1;
+  }
+
+  return { msg, linhasAfetadas };
+};
+
+const getClienteByID = async (clienteIDPar) => {
+  return (
+    await db.query(
+      "SELECT *" +
+      "FROM clientes WHERE clienteid = $1 and deleted = false ORDER BY nome ASC",
+      [clienteIDPar]
+    )
+  ).rows;
+};
+
+
+
+const updateClientes = async (clienteREGPar) => {
+  console.log("[updateCliente]", clienteREGPar)
+  let linhasAfetadas;
+  let msg = "ok";
+  try {
+    linhasAfetadas = (
+      await db.query(
+        "UPDATE clientes SET " +
+        "codigo = $2, " +
+        "nome = $3, " +
+        "endereco = $4, " +
+        "ativo = $5, " +
+        "deleted = $6 " +
+        "WHERE clienteid = $1",
+        [
+          clienteREGPar.clienteid,
+          clienteREGPar.codigo,
+          clienteREGPar.nome,
+          clienteREGPar.endereco,
+          clienteREGPar.ativo,
+          clienteREGPar.deleted,
+        ]
+      )
+    ).rowCount;
+  } catch (error) {
+    msg = "[mdlClientes|updateClientes] " + error.detail;
+    linhasAfetadas = -1;
+  }
+}
+
+const DeleteClientes = async (clienteREGPar) => {
+  let linhasAfetadas;
+  let msg = "ok";
+
+  try {
+    linhasAfetadas = (
+      await db.query(
+        "UPDATE clientes SET " + "deleted = true " + "WHERE clienteid = $1",
+        [clienteREGPar.clienteid]
+      )
+    ).rowCount;
+  } catch (error) {
+    msg = "[mdlclientes|DeleteClientes] " + error.detail;
+    linhasAfetadas = -1;
+  }
+
+  return { msg, linhasAfetadas };
+};
+
 module.exports = {
-    getAllClientes,
-    insertClientes
+  getAllClientes,
+  getClienteByID,
+  insertClientes,
+  updateClientes,
+  DeleteClientes
 };
