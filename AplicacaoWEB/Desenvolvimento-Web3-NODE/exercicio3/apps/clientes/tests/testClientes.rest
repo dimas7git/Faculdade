@@ -1,0 +1,20 @@
+### teste de buscar todos os clientes
+GET http://localhost:40001/getAllClientes HTTP/1.1
+content-type: application/json
+
+{    
+    
+}
+
+### teste de inserção de aluno
+POST http://localhost:40001/insertClientes HTTP/1.1
+content-type: application/json
+
+{    
+    "clienteid": 3,
+    "codigo": "CLI03",
+    "nome": "Carlos das Matias",
+    "endereco": " Rua das couves",
+    "ativo": true,
+    "deleted": false
+}
