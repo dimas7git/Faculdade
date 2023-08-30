@@ -21,9 +21,42 @@ const getAlunoByID = (req, res) =>
     res.json({ status: "ok", registro: registro });
   })();
 
+// Função que insere um novo aluno
+const insertAlunos = (request, res) =>
+  (async () => {
+    //@ Atenção: aqui já começamos a utilizar a variável msg para retornar erros de banco de dados.
+    const alunoREG = request.body;
+    // Chama a função do modelo para inserir o aluno
+    let { msg, linhasAfetadas } = await mdlAlunos.insertAlunos(alunoREG);
+    // Retorna um objeto JSON com o status da operação e o número de linhas afetadas
+    res.json({ "status": msg, "linhasAfetadas": linhasAfetadas });
+  })();
+
+// Função que atualiza um aluno existente
+const updateAlunos = (request, res) =>
+  (async () => {
+    const alunoREG = request.body;
+    // Chama a função do modelo para atualizar o aluno
+    let  { msg, linhasAfetadas } = await mdlAlunos.UpdateAlunos(alunoREG);
+    // Retorna um objeto JSON com o status da operação e o número de linhas afetadas
+    res.json({ "status": msg, "linhasAfetadas": linhasAfetadas });
+  })();
+
+// Função que exclui um aluno
+const DeleteAlunos = (request, res) =>
+  (async () => {
+    const alunoREG = request.body;
+    // Chama a função do modelo para excluir o aluno
+    let { msg, linhasAfetadas } = await mdlAlunos.DeleteAlunos(alunoREG);
+    // Retorna um objeto JSON com o status da operação e o número de linhas afetadas
+    res.json({ "status": msg, "linhasAfetadas": linhasAfetadas });
+  })();
 
 // Exporta as funções para que possam ser utilizadas em outros lugares do código
 module.exports = {
   getAllAlunos,
-  getAlunoByID
+  getAlunoByID,
+  insertAlunos,
+  updateAlunos,
+  DeleteAlunos
 };
