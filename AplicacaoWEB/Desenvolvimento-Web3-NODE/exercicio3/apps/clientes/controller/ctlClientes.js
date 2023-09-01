@@ -1,60 +1,84 @@
+// Importa o módulo mdlClientes do diretório "../model/mdlClientes"
 const mdlClientes = require("../model/mdlClientes");
 
-
-const getAllClientes = (req, res) =>
-  (async () => {
-    // Chama a função do modelo para buscar todos os alunos
-    let registro = await mdlClientes.getAllClientes();
-    // Retorna um objeto JSON com o status "ok" e os registros obtidos
-    res.json({ status: "ok", "registro": registro });
-
-  })(); 
-
-// Função que insere um novo aluno
-const insertClientes = (request, res) =>
-  (async () => {
-    //@ Atenção: aqui já começamos a utilizar a variável msg para retornar erros de banco de dados.
-    const ClientesREG = request.body;
-    // Chama a função do modelo para inserir o aluno
-    console.log("[insertClientesCTL",ClientesREG) 
-    let { msg, linhasAfetadas } = await mdlClientes.insertClientes(ClientesREG);
-    // Retorna um objeto JSON com o status da operação e o número de linhas afetadas
-    res.json({ "status": msg, "linhasAfetadas": linhasAfetadas });
-  })();
-
-  const getClienteByID = (req, res) =>
-  (async () => {
-    // Obtém o ID do aluno a partir do corpo da requisição
-    const clienteid = parseInt(req.body.clienteid);
-    // Chama a função do modelo para buscar o aluno pelo ID
-    let registro = await mdlClientes.getClienteByID(clienteid);
-    // Retorna um objeto JSON com o status "ok" e o registro obtido
-    res.json({ status: "ok", registro: registro });
-  })();
+// Define uma função chamada getAllClientes com dois parâmetros: req (requisição) e res (resposta)
+const getAllClientes = async (req, res) => {
+  // Dentro da função, declaramos uma variável chamada 'registro' para armazenar os resultados da consulta
+  // Usamos a palavra-chave 'await' para aguardar a conclusão da função 'mdlClientes.getAllClientes()'
+  let registro = await mdlClientes.getAllClientes();
+  
+  // Quando a função 'getAllClientes' é concluída, enviamos uma resposta JSON para o cliente
+  // A resposta contém um objeto JSON com duas propriedades: 'status' e 'registro'
+  // 'status' é uma string com o valor "ok"
+  // 'registro' contém os dados obtidos da função 'mdlClientes.getAllClientes()'
+  res.json({ status: "ok", "registro": registro });
+};
 
 
-  const updateClientes = (request, res) =>
-  (async () => {
-    const clienteREG = request.body;
-    // Chama a função do modelo para atualizar o aluno
-    let  { msg, linhasAfetadas } = await mdlClientes.updateClientes(clienteREG);
-    // Retorna um objeto JSON com o status da operação e o número de linhas afetadas
-    res.json({ "status": msg, "linhasAfetadas": linhasAfetadas });
-  })();
+// Define uma função chamada insertClientes com dois parâmetros: request (requisição) e res (resposta)
+const insertClientes = async (request, res) => {
+  // Obtém os dados do cliente a ser inserido do corpo da requisição
+  const ClientesREG = request.body;
+  
+  // Usa a palavra-chave 'await' para aguardar a conclusão da função 'mdlClientes.insertClientes()'
+  let { msg, linhasAfetadas } = await mdlClientes.insertClientes(ClientesREG);
+  
+  // Quando a função 'insertClientes' é concluída, enviamos uma resposta JSON para o cliente
+  // A resposta contém um objeto JSON com duas propriedades: 'status' e 'linhasAfetadas'
+  // 'status' é uma string com a mensagem obtida da função 'mdlClientes.insertClientes()'
+  // 'linhasAfetadas' contém o número de linhas afetadas pela inserção
+  res.json({ "status": msg, "linhasAfetadas": linhasAfetadas });
+};
 
-  const DeleteClientes = (request, res) =>
-  (async () => {
-    const clienteREG = request.body;
-    // Chama a função do modelo para excluir o aluno
-    let { msg, linhasAfetadas } = await mdlClientes.DeleteClientes(clienteREG);
-    // Retorna um objeto JSON com o status da operação e o número de linhas afetadas
-    res.json({ "status": msg, "linhasAfetadas": linhasAfetadas });
-  })();
+// Define uma função chamada getClienteByID com dois parâmetros: req (requisição) e res (resposta)
+const getClienteByID = async (req, res) => {
+  // Obtém o ID do cliente a ser buscado a partir dos parâmetros da requisição
+  const clienteid = parseInt(req.body.clienteid);
+  
+  // Usa a palavra-chave 'await' para aguardar a conclusão da função 'mdlClientes.getClienteByID()'
+  let registro = await mdlClientes.getClienteByID(clienteid);
+  
+  // Quando a função 'getClienteByID' é concluída, enviamos uma resposta JSON para o cliente
+  // A resposta contém um objeto JSON com duas propriedades: 'status' e 'registro'
+  // 'status' é uma string com o valor "ok"
+  // 'registro' contém os dados do cliente obtidos da função 'mdlClientes.getClienteByID()'
+  res.json({ status: "ok", registro: registro });
+};
 
-  module.exports = {
-    getAllClientes,
-    insertClientes,
-    getClienteByID,
-    updateClientes,
-    DeleteClientes
+// Define uma função chamada updateClientes com dois parâmetros: request (requisição) e res (resposta)
+const updateClientes = async (request, res) => {
+  // Obtém os dados do cliente a ser atualizado do corpo da requisição
+  const clienteREG = request.body;
+  
+  // Usa a palavra-chave 'await' para aguardar a conclusão da função 'mdlClientes.updateClientes()'
+  let  { msg, linhasAfetadas } = await mdlClientes.updateClientes(clienteREG);
+  
+  // Quando a função 'updateClientes' é concluída, enviamos uma resposta JSON para o cliente
+  // A resposta contém um objeto JSON com duas propriedades: 'status' e 'linhasAfetadas'
+  // 'status' é uma string com a mensagem obtida da função 'mdlClientes.updateClientes()'
+  // 'linhasAfetadas' contém o número de linhas afetadas pela atualização
+  res.json({ "status": msg, "linhasAfetadas": linhasAfetadas });
+};
+
+// Define uma função chamada DeleteClientes com dois parâmetros: request (requisição) e res (resposta)
+const DeleteClientes = async (request, res) => {
+  // Obtém os dados do cliente a ser excluído do corpo da requisição
+  const clienteREG = request.body;
+  
+  // Usa a palavra-chave 'await' para aguardar a conclusão da função 'mdlClientes.DeleteClientes()'
+  let { msg, linhasAfetadas } = await mdlClientes.DeleteClientes(clienteREG);
+  
+  // Quando a função 'DeleteClientes' é concluída, enviamos uma resposta JSON para o cliente
+  // A resposta contém um objeto JSON com duas propriedades: 'status' e 'linhasAfetadas'
+  // 'status' é uma string com a mensagem obtida da função 'mdlClientes.DeleteClientes()'
+  // 'linhasAfetadas' contém o número de linhas afetadas pela exclusão
+  res.json({ "status": msg, "linhasAfetadas": linhasAfetadas });
+};
+// Exporta as funções para que possam ser usadas em outros lugares do código
+module.exports = {
+  getAllClientes,
+  insertClientes,
+  getClienteByID,
+  updateClientes,
+  DeleteClientes
 };
