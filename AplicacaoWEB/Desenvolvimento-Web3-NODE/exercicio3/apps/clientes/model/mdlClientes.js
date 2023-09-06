@@ -57,39 +57,37 @@ const getClienteByID = async (clienteIDPar) => {
   return result.rows;
 };
 
-// Define a função updateClientes que atualiza os dados de um cliente no banco de dados
-const updateClientes = async (clienteREGPar) => {
-  console.log("[updateCliente]", clienteREGPar)
-  let linhasAfetadas;
-  let msg = "ok";
-  try {
-    // Executa uma consulta SQL assíncrona para atualizar os dados de um cliente específico com base no 'clienteid'
-    const result = await db.query(
-      "UPDATE clientes SET " +
-      "codigo = $2, " +
-      "nome = $3, " +
-      "endereco = $4, " +
-      "ativo = $5, " +
-      "deleted = $6 " +
-      "WHERE clienteid = $1",
-      [
-        clienteREGPar.clienteid,
-        clienteREGPar.codigo,
-        clienteREGPar.nome,
-        clienteREGPar.endereco,
-        clienteREGPar.ativo,
-        clienteREGPar.deleted,
-      ]
-    );
-
-    // Obtém o número de linhas afetadas pela operação de atualização
-    linhasAfetadas = result.rowCount;
-  } catch (error) {
-    // Em caso de erro, captura a mensagem de erro e define a mensagem de retorno
-    msg = "[mdlClientes|updateClientes] " + error.detail;
-    linhasAfetadas = -1;
-  }
-}
+  const updateClientes = async (clienteREGPar) => {
+    console.log("[updateCliente]",clienteREGPar)
+    let linhasAfetadas;
+    let msg = "ok";
+    try {
+      linhasAfetadas = (
+        await db.query(
+          "UPDATE clientes SET " +
+            "codigo = $2, " +
+            "nome = $3, " +
+            "endereco = $4, " +
+            "ativo = $5, " +
+            "deleted = $6 " +
+            "WHERE clienteid = $1",
+          [
+            clienteREGPar.clienteid,
+            clienteREGPar.codigo,
+            clienteREGPar.nome,
+            clienteREGPar.endereco,
+            clienteREGPar.ativo,         
+            clienteREGPar.deleted,
+          ]
+        )
+      ).rowCount;
+    } catch (error) {
+      msg = "[mdlClientes|updateClientes] " + error.detail;
+      linhasAfetadas = -1;
+    }
+  
+    return { msg, linhasAfetadas };
+  };
 
 // Define a função DeleteClientes que marca um cliente como excluído no banco de dados
 const DeleteClientes = async (clienteREGPar) => {

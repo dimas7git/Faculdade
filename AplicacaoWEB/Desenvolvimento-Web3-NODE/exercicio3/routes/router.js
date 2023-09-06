@@ -2,6 +2,7 @@
 const express = require("express");
 const routerApp = express.Router();
 const appClientes = require("../apps/clientes/controller/ctlClientes");
+const appPedidos = require("../apps/pedidos/controller/ctlPedidos");
 
 
 // Middleware específico para este roteador
@@ -23,6 +24,12 @@ routerApp.post("/insertClientes", appClientes.insertClientes);
 routerApp.post("/updateClientes", appClientes.updateClientes);
 routerApp.post("/DeleteClientes", appClientes.DeleteClientes);
 
+
+routerApp.get("/getAllPedidos", appPedidos.getAllPedidos);
+routerApp.post("/getPedidosByID", appPedidos.getPedidoByID);
+routerApp.post("/insertPedidos", appPedidos.insertPedidos);
+routerApp.post("/updatePedidos", appPedidos.updatePedidos);
+routerApp.post("/DeletePedidos", appPedidos.DeletePedidos);
 
 
 module.exports = routerApp;

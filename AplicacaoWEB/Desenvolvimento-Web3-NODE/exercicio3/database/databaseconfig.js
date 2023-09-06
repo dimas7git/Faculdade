@@ -5,7 +5,7 @@ const Pool = require('pg').Pool;
 // Você pode substituir esses valores pelas variáveis de ambiente definidas no arquivo .env
 const pool = new Pool({
   user: 'postgres',    // Nome de usuário do banco de dados
-  host: '172.17.0.1',   // Endereço do servidor do banco de dados
+  host: 'localhost',   // Endereço do servidor do banco de dados
   database: 'ex03',     // Nome do banco de dados
   password: 'postdba', // Senha do banco de dados
   port: 5432,          // Porta do banco de dados
