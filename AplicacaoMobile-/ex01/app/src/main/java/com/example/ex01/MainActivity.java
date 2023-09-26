@@ -5,20 +5,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+
 import android.widget.TextView;
 
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+    int pontoMaquina = 0;
+    int pontoHumano = 0;
+
+
 
     public void verifica(View view) {
-        TextView txtSorteado = findViewById(R.id.txtResultadoUser);
+
         EditText txtDigitado = findViewById(R.id.editTextNum);
         TextView txtResultado = findViewById(R.id.txtResultadoSorteio);
         TextView txtEscolhaMaquina = findViewById(R.id.txtResultadoMaquina);
@@ -32,25 +38,24 @@ public class MainActivity extends AppCompatActivity {
         String imprimir = "Número sorteado foi: " + Integer.toString(numeroSorteado);
         String imprimir2 = Integer.toString(escolhaDaMaquina);
         txtResultado.setText(imprimir);
-        txtEscolhaMaquina.setText(imprimir2);
+        txtEscolhaMaquina.setText("Número escolhido pela máquina foi: "+ imprimir2);
 
         String textoDigitadoHumano = txtDigitado.getText().toString();
-        txtSorteado.setText(textoDigitadoHumano);
+
         int numeroMaquina = escolhaDaMaquina;
         String textoPontoMaquina = txtPontoMaquina.getText().toString();
         String textoPontoHumano = txtPontoHumano.getText().toString();
         int numeroDigitadoHumano = Integer.parseInt(textoDigitadoHumano);
-        int pontoMaquina = Integer.parseInt(textoPontoMaquina);
-        int pontoHumano = Integer.parseInt(textoPontoHumano);
+
 
         if (numeroSorteado == numeroDigitadoHumano) {
             pontoHumano += 1;
-            txtPontoHumano.setText("Sua pontuação é: " + pontoHumano);
-        } else {
+            txtPontoHumano.setText("VOCÊ\n " + pontoHumano);
+        }
             if (numeroSorteado == numeroMaquina) {
                 pontoMaquina += 1;
-                txtPontoMaquina.setText("Pontuação da máquina é: " + pontoMaquina);
+                txtPontoMaquina.setText("MÁQUINA\n " + pontoMaquina);
             }
         }
     }
-}
+
