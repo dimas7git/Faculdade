@@ -15,7 +15,7 @@ function authenticationMiddleware(req, res, next) {
 /* GET home page. */
 router.get('/', authenticationMiddleware, function (req, res, next) {
   userName = req.session.userName;
-  res.render('index', { "title": 'Página principal', "local": "IFSP", "userName": userName});
+  res.render('index', { "title": 'Página principal', "local": "IFSP-  Câmpus Votuporanga", "userName": userName, "name": "Dimas"});
  });
 
  /* GET login page. */

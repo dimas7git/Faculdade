@@ -1,7 +1,11 @@
 @html.extend('layout', function(model) {
   @html.block('content', function(model) {
-    <h1>@model.title</h1>
-    <p>Welcome to @model.title</p>
-    <p> Você está no @model.local</p>
+    <div class="container text-center">
+      <h1 class="display-4">@model.title</h1>
+      <p class="lead"> @model.name, Bem-vindo a <strong>@model.title</strong></p>
+      <p>Você está no <span>@model.local</span></p>
+      <br>
+      <img src="ifsp.png">
+    </div>
   })
 })
