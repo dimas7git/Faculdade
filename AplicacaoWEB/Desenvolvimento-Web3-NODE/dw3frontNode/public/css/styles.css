@@ -62,7 +62,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-bg: rgb(226, 226, 226);
   --bs-border-width: 1px;
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
@@ -535,6 +535,7 @@ progress {
   }
 }
 
+
 .display-5 {
   font-size: calc(1.425rem + 2.1vw);
   font-weight: 300;
@@ -556,6 +557,67 @@ progress {
     font-size: 2.5rem;
   }
 }
+
+/* Estilo para o cabeçalho da navbar */
+.navbar {
+  background-color: #343a40; /* Cor de fundo da barra de navegação */
+}
+
+.navbar-brand {
+  font-size: 24px; /* Tamanho da fonte do logotipo */
+  color: #fff; /* Cor do logotipo */
+}
+
+.navbar-dark .navbar-toggler-icon {
+  border-color: white; /* Cor do ícone do botão de alternância da barra de navegação */
+}
+
+/* Estilo para a barra lateral */
+.sb-sidenav {
+  background-color: #343a40; /* Cor de fundo da barra lateral */
+}
+
+.sb-sidenav-menu-heading,
+.nav-link {
+  color: white !important; /* Cor do texto da barra lateral */
+}
+
+.sb-sidenav-menu-heading {
+  font-size: 18px; /* Tamanho da fonte dos cabeçalhos da barra lateral */
+}
+
+/* Estilo para o conteúdo principal */
+#layoutSidenav_content {
+  background-color: #ffffffad; /* Cor de fundo do conteúdo principal */
+  /*padding: 20px; /* Espaçamento interno do conteúdo principal */
+}
+
+/* Estilo para os botões */
+.btn-primary,
+.btn-success,
+.btn-warning,
+.btn-danger {
+  margin-right: 10px; /* Espaçamento entre botões */
+}
+
+/* Adicione outros estilos personalizados conforme necessário */
+
+/* Exemplo de estilo para cabeçalhos */
+h1, h2, h3, h4, h5, h6 {
+  color: #333; /* Cor do texto dos cabeçalhos */
+  margin-bottom: 20px; /* Espaçamento inferior dos cabeçalhos */
+}
+
+/* Exemplo de estilo para links */
+a {
+  color: #007bff; /* Cor padrão dos links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3; /* Cor dos links ao passar o mouse por cima */
+}
+
 
 .list-unstyled {
   padding-left: 0;
@@ -596,6 +658,103 @@ progress {
 .blockquote-footer::before {
   content: "— ";
 }
+
+/* Estilo para botões secundários */
+.btn-secondary {
+  background-color: #6c757d; /* Cor de fundo dos botões secundários */
+  color: #fff; /* Cor do texto dos botões secundários */
+}
+
+/* Estilo para botões de sucesso */
+.btn-success {
+  background-color: #28a745; /* Cor de fundo dos botões de sucesso */
+  border-color: #28a745; /* Cor da borda dos botões de sucesso */
+}
+
+.btn-success:hover {
+  background-color: #218838; /* Cor de fundo dos botões de sucesso ao passar o mouse por cima */
+  border-color: #1e7e34; /* Cor da borda dos botões de sucesso ao passar o mouse por cima */
+}
+
+/* Estilo para botões de perigo */
+.btn-danger {
+  background-color: #dc3545; /* Cor de fundo dos botões de perigo */
+  border-color: #dc3545; /* Cor da borda dos botões de perigo */
+}
+
+.btn-danger:hover {
+  background-color: #c82333; /* Cor de fundo dos botões de perigo ao passar o mouse por cima */
+  border-color: #bd2130; /* Cor da borda dos botões de perigo ao passar o mouse por cima */
+}
+
+/* Estilo para ícones */
+i {
+  font-size: 20px; /* Tamanho dos ícones */
+}
+
+/* Estilo para tabelas */
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: #fff; /* Cor de fundo das tabelas */
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6; /* Cor das bordas das células */
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6; /* Cor da borda inferior do cabeçalho */
+}
+
+.table tbody+tbody {
+  border-top: 2px solid #dee2e6; /* Cor da borda superior das linhas de dados */
+}
+
+/* Estilo para formulários */
+.form-control {
+  border: 1px solid #ced4da; /* Cor da borda dos campos de formulário */
+}
+
+/* Estilo para alertas de sucesso */
+.alert-success {
+  background-color: #d4edda; /* Cor de fundo dos alertas de sucesso */
+  border-color: #c3e6cb; /* Cor da borda dos alertas de sucesso */
+  color: #155724; /* Cor do texto dos alertas de sucesso */
+}
+
+/* Estilo para alertas de erro */
+.alert-danger {
+  background-color: #f8d7da; /* Cor de fundo dos alertas de erro */
+  border-color: #f5c6cb; /* Cor da borda dos alertas de erro */
+  color: #721c24; /* Cor do texto dos alertas de erro */
+}
+
+/* Estilo para caixa de seleção */
+.form-check-label {
+  color: #333; /* Cor do texto das caixas de seleção */
+}
+
+/* Estilo para rodapé */
+.footer {
+  background-color: #343a40; /* Cor de fundo do rodapé */
+  color: #fff; /* Cor do texto do rodapé */
+  padding: 20px; /* Espaçamento interno do rodapé */
+  text-align: center;
+}
+
+/* Estilo para ícones de seta */
+.arrow-icon {
+  font-size: 24px; /* Tamanho dos ícones de seta */
+  color: #007bff; /* Cor dos ícones de seta */
+}
+
 
 .img-fluid {
   max-width: 100%;
@@ -2862,8 +3021,8 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #0d6efd;
-  --bs-btn-border-color: #0d6efd;
+  --bs-btn-bg: #82868b;
+  --bs-btn-border-color: #fffff;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #0b5ed7;
   --bs-btn-hover-border-color: #0a58ca;
@@ -2914,7 +3073,7 @@ textarea.form-control-lg {
 .btn-info {
   --bs-btn-color: #000;
   --bs-btn-bg: #0dcaf0;
-  --bs-btn-border-color: #0dcaf0;
+  --bs-btn-border-color: #ffffff;
   --bs-btn-hover-color: #000;
   --bs-btn-hover-bg: #31d2f2;
   --bs-btn-hover-border-color: #25cff2;
@@ -7796,6 +7955,7 @@ textarea.form-control-lg {
 .py-4 {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important;
+  background-color: #ffffffad;
 }
 
 .py-5 {
@@ -11240,4 +11400,91 @@ body {
   width: 20px !important;
   font-size: 0.75rem;
   border-radius: 0.375rem !important;
+}
+
+
+/* Estilos para a tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+thead {
+  background-color: #f2f2f2; /* Cinza suave para o cabeçalho */
+  color: #333;
+}
+
+th {
+  background-color: #d9d9d9; /* Cinza suave para os cabeçalhos das colunas */
+  color: #333;
+  cursor: pointer;
+}
+
+th:hover {
+  background-color: #c0c0c0; /* Cinza um pouco mais escuro quando hover */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Cinza suave para as linhas pares */
+}
+
+/* Estilos para os botões de ação (Visualizar) */
+.btn-info {
+  background-color: #959fa1;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.btn-info:hover {
+  background-color: #117a8b;
+}
+
+/* Estilos para links e textos */
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #0056b3;
+}
+.container {
+  background-color: rgba(255, 255, 255, 0.9); /* Cor de fundo com transparência */
+  padding: 20px;
+  border-radius: 10px; /* Cantos arredondados */
+  margin: 20px auto; /* Centralizar o contêiner horizontalmente */
+  max-width: 600px; /* Largura máxima do contêiner */
+}
+ span {
+    font-weight: bold;
+    color: #173b63; /* Cor azul */
+  }
+  /* Estilo para a imagem */
+  img{
+    width: 250px;
+  }
+.img-container {
+  max-width: 300px; /* Largura máxima de 300 pixels */
+  height: auto; /* Mantém a proporção da imagem */
+  border: 2px solid #ccc; /* Borda de 2px com cor cinza */
+  border-radius: 5px; /* Cantos arredondados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.2s ease-in-out; /* Efeito de transição suave */
+}
+
+/* Efeito de escala ao passar o mouse sobre a imagem */
+.img-container:hover {
+  transform: scale(1.05); /* Aumenta a imagem em 5% */
 }
