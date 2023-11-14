@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText editTextAltura, editTextPeso;
     private TextView textViewResultado, textViewPesoIdeal;
-    private ImageView imageViewSexo;
+    private ImageView imageView2;
     private Switch switchAtivar, switchSexo;
     private Button buttonCalcular;
 
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         editTextPeso = findViewById(R.id.editTextPeso);
         textViewResultado = findViewById(R.id.textViewResultado);
         textViewPesoIdeal = findViewById(R.id.textViewPesoIdeal);
-        imageViewSexo = findViewById(R.id.imageViewSexo);
+        imageView2 = findViewById(R.id.imageView2);
         switchAtivar = findViewById(R.id.switchAtivar);
         switchSexo = findViewById(R.id.switchSexo);
         buttonCalcular = findViewById(R.id.buttonCalcular);
@@ -68,6 +68,12 @@ public class MainActivity extends AppCompatActivity {
         } else {
             imc = peso / (altura * altura);
             pesoIdeal = (62.1 * altura) - 44.7;
+        }
+        if (switchSexo.isChecked()) {
+            imageView2.setImageResource(R.drawable.homem);
+        } else {
+            // Mulher selecionada
+            imageView2.setImageResource(R.drawable.mulher);
         }
 
 // Exibe os resultados
