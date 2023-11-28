@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <Switch
+        android:id="@+id/switchAtivar"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Ativar os campos" />
+
+    <EditText
+        android:id="@+id/editTextAltura"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/switchAtivar"
+        android:layout_marginTop="16dp"
+        android:hint="Altura (m)"/>
+
+    <EditText
+        android:id="@+id/editTextPeso"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/editTextAltura"
+        android:layout_marginTop="8dp"
+        android:hint="Peso (kg)"/>
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPeso"
+        android:layout_marginTop="16dp"
+        android:text="Calcular"/>
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonCalcular"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewPesoIdeal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewResultado"
+        android:layout_marginTop="8dp"/>
+
+    <Switch
+        android:id="@+id/switchSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@+id/switchAtivar"
+        android:layout_alignBottom="@+id/switchAtivar"
+        android:layout_marginTop="-1dp"
+        android:layout_marginBottom="-25dp"
+        android:text="Homem"
+        android:textOff="Homem"
+        android:textOn="Mulher" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewPesoIdeal"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="107dp"
+        app:srcCompat="@drawable/imagem"
+        tools:srcCompat="@drawable/imagem" />
+
+</RelativeLayout>
