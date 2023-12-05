@@ -3,33 +3,38 @@ package com.example.trocadados;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.textclassifier.TextClassification;
 import android.widget.TextView;
 
 public class RecebeDados extends AppCompatActivity {
 
-    private TextView txtnome,txtidade;
+    private TextView txtNota1,txtNota2,txtResultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recebe_dados);
 
-        txtnome=findViewById(R.id.txtNome);
-        txtidade=findViewById(R.id.txtIdade);
-        //vamos criar duas variaveis intermediarias para receber os valores da primeira activity
-        String nome;
-        int idade;
+        txtNota1=findViewById(R.id.txtNota1);
+        txtNota2=findViewById(R.id.txtNota2);
+        txtResultado=findViewById(R.id.txtResultado);
 
-        //vamos criar o objeto que recebe os dados
+        int nota1,nota2,peso1,peso2,resultado;
+
+
         Bundle dados = getIntent().getExtras();
 
-        // em seguida recebemos a String e o int com o metodo especifico
-        nome = dados.getString("nome");
-        idade = dados.getInt("idade");
 
-        //agora vamos mostrar os dados recebidos nos respectivos textviews
-        txtnome.setText(""+nome);
-        txtidade.setText(""+idade);
+        nota1 = dados.getInt("nota1");
+        nota2 = dados.getInt("nota2");
+        peso1 = dados.getInt("peso1");
+        peso2= dados.getInt("peso2");
+
+        resultado = ((nota1 * peso1 + nota2 * peso2) / (peso1 + peso2));
+
+
+        txtNota1.setText(""+nota1);
+        txtNota2.setText(""+nota2);
+        txtResultado.setText(""+resultado);
+
     }
 }
