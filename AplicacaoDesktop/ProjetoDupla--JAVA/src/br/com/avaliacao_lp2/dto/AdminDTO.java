@@ -1,9 +1,6 @@
 package br.com.avaliacao_lp2.dto;
 
-/**
- *
- * @author sassmatheus
- */
+
 public class AdminDTO {
     
     private String loginAdmin, senhaAdmin;
