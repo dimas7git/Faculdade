@@ -1,9 +1,6 @@
 package br.com.avaliacao_lp2.dto;
 
-/**
- *
- * @author sassmatheus
- */
+
 public class AlunoDTO {
     private String nomeAluno, cpf, email, telefone, estado, cidade;
     private int idAluno;
