@@ -1,9 +1,6 @@
 package br.com.avaliacao_lp2.dto;
 
-/**
- *
- * @author sassmatheus
- */
+
 public class CursoDTO {
     private String nomeCurso, sigla, descricao;
     private int idCurso;
