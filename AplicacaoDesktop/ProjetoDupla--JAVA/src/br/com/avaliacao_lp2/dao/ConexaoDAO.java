@@ -2,10 +2,7 @@ package br.com.avaliacao_lp2.dao;
 
 import java.sql.*;
 
-/**
- *
- * @author sassmatheus
- */
+
 public class ConexaoDAO {
     public static Connection con = null;
     
