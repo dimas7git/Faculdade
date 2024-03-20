@@ -5,10 +5,7 @@ import br.com.avaliacao_lp2.dto.MatriculaDTO;
 import br.com.avaliacao_lp2.dto.CursoDTO;
 import java.sql.*;
 
-/**
- *
- * @author sassmatheus
- */
+
 public class MatriculaDAO {
     
     public MatriculaDAO() {
