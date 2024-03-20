@@ -9,10 +9,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JPasswordField;
 
-/**
- *
- * @author sassmatheus
- */
 public class AdminDAO {
 
     public static Object criptografar(JPasswordField senha) {
