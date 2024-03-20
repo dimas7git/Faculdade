@@ -10,10 +10,7 @@ import java.util.logging.Logger;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author sassmatheus
- */
+
 public class BackupCTR {
 
     private static final Logger log = Logger.getLogger(BackupCTR.class.getName());
