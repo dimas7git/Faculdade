@@ -3,10 +3,6 @@ package br.com.avaliacao_lp2.dao;
 import java.sql.*;
 import br.com.avaliacao_lp2.dto.AlunoDTO;
 
-/**
- *
- * @author sassmatheus
- */
 public class AlunoDAO {
     public AlunoDAO(){
     }
