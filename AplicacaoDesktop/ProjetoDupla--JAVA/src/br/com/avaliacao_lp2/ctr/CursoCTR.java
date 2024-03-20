@@ -5,10 +5,7 @@ import br.com.avaliacao_lp2.dao.CursoDAO;
 import br.com.avaliacao_lp2.dto.CursoDTO;
 import java.sql.ResultSet;
 
-/**
- *
- * @author sassmatheus
- */
+
 public class CursoCTR {
     public CursoCTR(){
     }
