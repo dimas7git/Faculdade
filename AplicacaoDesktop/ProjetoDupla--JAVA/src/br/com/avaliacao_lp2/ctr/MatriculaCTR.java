@@ -7,10 +7,6 @@ import br.com.avaliacao_lp2.dao.ConexaoDAO;
 import br.com.avaliacao_lp2.dto.CursoDTO;
 import java.sql.ResultSet;
 
-/**
- *
- * @author sassmatheus
- */
 public class MatriculaCTR{
     public MatriculaCTR(){
     }
