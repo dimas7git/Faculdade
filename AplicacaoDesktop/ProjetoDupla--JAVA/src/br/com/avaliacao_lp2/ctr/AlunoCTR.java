@@ -5,10 +5,6 @@ import br.com.avaliacao_lp2.dto.AlunoDTO;
 import br.com.avaliacao_lp2.dao.AlunoDAO;
 import java.sql.ResultSet;
 
-/**
- *
- * @author sassmatheus
- */
 public class AlunoCTR {
     public AlunoCTR(){
     }
