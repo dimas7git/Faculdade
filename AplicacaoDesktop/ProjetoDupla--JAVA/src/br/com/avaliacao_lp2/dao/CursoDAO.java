@@ -2,10 +2,7 @@ package br.com.avaliacao_lp2.dao;
 
 import java.sql.*;
 import br.com.avaliacao_lp2.dto.CursoDTO;
-/**
- *
- * @author sassmatheus
- */
+
 public class CursoDAO {
     public CursoDAO(){
     }
