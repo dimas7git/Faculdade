@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo"
+    android:orientation="center"
+    android:gravity="center">
+
+
+    <TableLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:gravity="center"
+        android:text="Imobiliária"
+        android:textSize="40sp" />
+
+    <TableLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TableRow android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome" />
+
+            <EditText
+                android:id="@+id/nome"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Região" />
+
+            <EditText
+                android:id="@+id/regiao"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+    </TableLayout>
+
+        <ImageButton
+            android:id="@+id/seta"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/seta" />
+    </TableLayout>
+
+</LinearLayout>
