@@ -3,12 +3,13 @@ clc;
 
 imgMaior = imread('Lena512.bmp');
 imgMenor = imread('if30.bmp');
+imgMenor1 = rgb2gray(imgMenor);
 
 [M,N] = size(imgMenor);
 imgNova = imgMaior;
 
 for i=1:M
-  for j = 1:N
+  for j = 1:N+512
     imgNova(i,j) = (imgMenor(i,j));
   endfor
 endfor
