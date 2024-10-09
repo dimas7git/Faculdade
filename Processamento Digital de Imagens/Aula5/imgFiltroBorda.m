@@ -18,4 +18,5 @@ figure(1),subplot(1,4,1), imshow(imgSobel);
 figure(1),subplot(1,4,2), imshow(imgCanny);
 figure(1),subplot(1,4,3), imshow(imgRoberts);
 figure(1),subplot(1,4,4), imshow(imgPrewitt);
+figure(1),subplot(1,4,4), imshow(img);
 
