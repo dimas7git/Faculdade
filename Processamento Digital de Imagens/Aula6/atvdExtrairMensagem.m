@@ -1,7 +1,7 @@
 pkg load image;
 clc;
 
-imgJunto = imread('imagemComMensagem.bmp');
+imgJunto = imread('imagemComMensagem.png');
 imgR = imgJunto(:,:,1);
 imgG = imgJunto(:,:,2);
 imgB = imgJunto(:,:,3);
