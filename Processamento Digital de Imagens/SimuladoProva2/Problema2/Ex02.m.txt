@@ -1,0 +1,66 @@
+clc;
+clear all;
+pkg load image;
+
+function conta_moedas = processarImagem(caminho_imagem)
+
+
+    imgOriginal = imread(caminho_imagem);
+    img = imgOriginal;
+
+    if size(img, 3) == 3
+        img = rgb2gray(img);
+    end
+
+    [M, N] = size(img);
+    for i = 1:M
+        for j = 1:N
+            if img(i, j) <= 50
+                img(i, j) = 0;
+            else
+                img(i, j) = 255;
+            end
+        end
+    end
+
+    se = strel('disk', 30, 0);    
+ img_aberta = imerode(img, se);  % Erosão
+    img_aberta = imdilate(img_aberta, se);  % Dilatação
+    img = img_aberta;
+
+    se2 = strel('disk', 10, 0);
+    img = imerode(img, se2);
+
+    [labeled_img, num_objects] = bwlabel(img);
+
+    stats = regionprops(labeled_img, 'Area', 'Centroid', 'BoundingBox');
+
+    min_radius = 20; 
+
+    conta_moedas = 0;
+    for k = 1:num_objects
+        % Calcular o raio equivalente
+        radius = sqrt(stats(k).Area / pi);
+
+        % Verificar se o raio é suficiente
+        if radius >= min_radius
+            conta_moedas = conta_moedas + 1;
+        end
+    end
+
+    figure;
+    imshow(labeled_img);
+    title('Imagem com Objetos Detectados');
+
+    % Adicionar o número de objetos grandes na imagem
+    text(10, 10, sprintf('Número de Objetos: %d', conta_moedas), ...
+        'Color', 'yellow', 'FontSize', 12, 'FontWeight', 'bold');
+end
+
+imagens = {'moeda1.bmp', 'moeda2.bmp', 'moeda3.bmp', 'moeda4.bmp', 'moeda5.bmp', 'moeda6.bmp'};
+
+for i = 1:length(imagens)
+    imagem_atual = imagens{i};
+    numero_de_objetos = processarImagem(imagem_atual);
+    fprintf('Imagem "%s" -> %d moedas\n', imagem_atual, numero_de_objetos);
+end

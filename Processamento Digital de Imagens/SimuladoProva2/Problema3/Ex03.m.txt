@@ -1,0 +1,29 @@
+pkg load image;
+clc;
+clear all;
+
+
+function comprime_img(placa, numero)
+  img = imread(placa);
+
+  if size(img, 3) == 3
+    img = rgb2gray(img);
+  end
+
+  img = im2bw(img);
+
+  nome_arquivo = sprintf('img%d_comprimida.jpg', numero);
+
+  imwrite(img, nome_arquivo, 'quality', 1);
+
+  imshow(img);
+end
+
+comprime_img("placa1.bmp", 1);
+comprime_img("placa2.bmp", 2);
+comprime_img("placa3.bmp", 3);
+comprime_img("placa4.bmp", 4);
+comprime_img("placa5.bmp", 5);
+
+
+

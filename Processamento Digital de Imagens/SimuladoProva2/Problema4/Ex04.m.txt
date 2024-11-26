@@ -1,0 +1,21 @@
+pkg load image; 
+clc;  
+clear all; 
+img = imread("placa2terra.bmp");
+if size(img, 3) == 3
+    img = rgb2gray(img);
+end
+
+bw = im2bw(img);  
+
+se = strel('disk', 8,0);
+opened_img = imclose(bw, se);
+
+subplot(1, 2, 1);
+imshow(bw);
+title('Imagem Binária');
+
+subplot(1, 2, 2);
+imshow(opened_img);
+title('Imagem com Abertura');
+imwrite(opened_img,'placa2limpa.bmp');
